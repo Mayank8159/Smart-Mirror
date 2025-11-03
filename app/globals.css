@@ -1,26 +1,80 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Import a cosmic font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Reset basic browser styles */
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  /* Crucial for the "magic" mirror effect */
+  background-color: #000000;
+  color: #ffffff; /* Default text color is white/light gray */
+  font-family: Arial, sans-serif; /* Use a clean, sans-serif font */
+  font-size: 16px;
+  line-height: 1.5;
+  overflow: hidden; /* Prevent scrolling */
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Base styles for all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Styles for the Next.js main layout/app container */
+#__next {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Organize content vertically */
+  align-items: center;
+  justify-content: space-between; /* Distribute content to corners/edges */
+  padding: 20px; /* Some padding around the edge */
+}
+
+/* Typography for smart mirror content */
+h1 {
+  font-size: 4em; /* Very large for visibility */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+
+h2 {
+  font-size: 2.5em;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+p,
+span,
+li {
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #cccccc; /* Slightly softer white for auxiliary info */
+  margin-bottom: 0.5em;
+}
+
+/* Ensure no visual distractions */
+a {
+  color: inherit; /* Keep links the same color as surrounding text */
+  text-decoration: none;
+}
+
+/* Utility to ensure maximum visibility for key data */
+.highlight {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Minimalist container styles */
+.module-container {
+  /* No background, no borders, just floating text */
+  width: 100%;
+  max-width: 100%;
+  padding: 10px 0;
 }
