@@ -61,7 +61,7 @@ export async function fetchWeatherData(): Promise<WeatherData> {
             temp: currentData.temperature, 
             condition: `Code ${currentData.weathercode}`, 
             icon: getWeatherIcon(currentData.weathercode),
-            city: "Howrah, IN", 
+            city: "Kolkata, IN", 
         };
 
     } catch (error) {

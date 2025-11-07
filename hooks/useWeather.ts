@@ -18,7 +18,7 @@ interface UseWeatherResult {
 
 // Configuration
 const API_KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY; // Ensure this is set in .env.local
-const CITY = 'Howrah, IN'; // Your current location
+const CITY = 'Kolkata, IN'; // Your current location
 const REFRESH_INTERVAL_MS = 600000; // 10 minutes
 
 // -----------------------------------------------------
